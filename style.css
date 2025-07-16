@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.sun {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px yellow;
+  z-index: 10;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: rotate linear infinite;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Real planet images */
+.mercury { width: 28px; height: 28px; background-image: url('mercury.png'); }
+.venus   { width: 51px; height: 51px; background-image: url('venus.png'); }
+.earth   { width: 59px; height: 59px; background-image: url('earth.png'); }
+.mars    { width: 50px; height: 50px; background-image: url('mars.png'); }
+.jupiter { width: 128px; height: 128px; background-image: url('jupiter.png');}
+.saturn  { width: 110px; height: 110px; background-image: url('saturn.png'); }
+.uranus  { width: 95px; height: 95px; background-image: url('uranus.png'); }
+.neptune { width: 109px; height: 109px; background-image: url('neptune.png');}
+
+
+/* Orbit sizes and rotation speed */
+.mercury-orbit { width: 250px; height: 250px; animation-duration: 9s; }
+.venus-orbit   { width: 340px; height: 340px; animation-duration: 12s; }
+.earth-orbit   { width: 440px; height: 440px; animation-duration: 24s; }
+.mars-orbit    { width: 540px; height: 540px; animation-duration: 16s; }
+.jupiter-orbit { width: 700px; height: 700px; animation-duration: 14s; }
+.saturn-orbit  { width: 760px; height: 760px; animation-duration: 19s; }
+.uranus-orbit  { width: 820px; height: 820px; animation-duration: 28s; }
+.neptune-orbit { width: 980px; height: 980px; animation-duration: 25s; }
+
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg);}
+
+}
+home {
+  background: url('earth-home.jpg') no-repeat center center/cover;
+}
+.pollution {
+  background: url('pollution.jpg') no-repeat center center/cover;
+}
+climate {
+  background: url('climate.jpg') no-repeat center center/cover;
+}
+.deforestation {
+  background: url('deforestation.jpg') no-repeat center center/cover;
+}
+.oceans {
+  background: url('oceans.jpg') no-repeat center center/cover;
+}
+wildlife {
+  background: url('wildlife.jpg') no-repeat center center/cover;
+}
+.disasters {
+  background: url('disasters.jpg') no-repeat center center/cover;
+}
+.solutions {
+  background: url('solutions.jpg') no-repeat center center/cover;
+}
+.facts {
+  background: url('facts.jpg') no-repeat center center/cover;
+  overflow-y: auto;
+}
+
+.solution h3 {
+  color: #2e7d32;
+}
+
+footer {
+  background-color: #030b0a;
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+/* Header Styling */
+header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent for visibility over star bg */
+  padding: 20px 10px;
+  color: #ffffff;
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title */
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #00e5ff;
+}
+
+/* Navigation Links */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a5f3fc; /* light cyan */
+  margin: 0 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #ffffff;
+}
+
